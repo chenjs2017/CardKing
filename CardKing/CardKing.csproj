@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.0" />
+    <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="6.10.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.1" />
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Home\About.cshtml" />
+    <Content Remove="Views\Home\Contact.cshtml" />
+    <Content Remove="Views\Home\Index.cshtml" />
+    <Content Remove="wwwroot\images\banner1.svg" />
+    <Content Remove="wwwroot\images\banner2.svg" />
+    <Content Remove="wwwroot\images\banner3.svg" />
+    <Content Remove="wwwroot\images\banner4.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Controllers\HomeController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
+    <Folder Include="Views\Card\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\Shared\_AngularLayout.cshtml" />
+  </ItemGroup>
+</Project>

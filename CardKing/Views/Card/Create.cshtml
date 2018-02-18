@@ -1,0 +1,52 @@
+@model CardKing.Models.Card
+
+@{
+    ViewData["Title"] = "Create";
+}
+<h2>Create</h2>
+
+<h4>Card</h4>
+<hr />
+<div class="row">
+    
+    <div class="col-md-4" ng-app="myapp" ng-controller="myctrl">
+        
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" ng-model="title" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Content" class="control-label"></label>
+                <input asp-for="Content" class="form-control" ng-model="content" />
+                <span asp-validation-for="Content" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FileName" class="control-label"></label>
+                <input asp-for="FileName" class="form-control" ng-model="filename"/>
+                <span asp-validation-for="FileName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+    <script>
+            var app = angular.module('myapp',[]);
+            app.controller('myctrl', function ($scope){
+                $scope.title='Mr A';
+
+
+            });
+     </script>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

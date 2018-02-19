@@ -1,0 +1,11 @@
+C:\Users\JackChen\source\repos\CardKing\CardKing\bin\Debug\netcoreapp2.0\CardKing.deps.json
+C:\Users\JackChen\source\repos\CardKing\CardKing\bin\Debug\netcoreapp2.0\CardKing.runtimeconfig.json
+C:\Users\JackChen\source\repos\CardKing\CardKing\bin\Debug\netcoreapp2.0\CardKing.runtimeconfig.dev.json
+C:\Users\JackChen\source\repos\CardKing\CardKing\bin\Debug\netcoreapp2.0\CardKing.dll
+C:\Users\JackChen\source\repos\CardKing\CardKing\bin\Debug\netcoreapp2.0\CardKing.pdb
+C:\Users\JackChen\source\repos\CardKing\CardKing\obj\Debug\netcoreapp2.0\CardKing.csprojResolveAssemblyReference.cache
+C:\Users\JackChen\source\repos\CardKing\CardKing\obj\Debug\netcoreapp2.0\CardKing.csproj.CoreCompileInputs.cache
+C:\Users\JackChen\source\repos\CardKing\CardKing\obj\Debug\netcoreapp2.0\CardKing.AssemblyInfoInputs.cache
+C:\Users\JackChen\source\repos\CardKing\CardKing\obj\Debug\netcoreapp2.0\CardKing.AssemblyInfo.cs
+C:\Users\JackChen\source\repos\CardKing\CardKing\obj\Debug\netcoreapp2.0\CardKing.dll
+C:\Users\JackChen\source\repos\CardKing\CardKing\obj\Debug\netcoreapp2.0\CardKing.pdb

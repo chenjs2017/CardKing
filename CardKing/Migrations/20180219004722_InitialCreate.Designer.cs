@@ -4,20 +4,22 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
-using MySql.Data.EntityFrameworkCore.Storage.Internal;
+using Microsoft.EntityFrameworkCore.Storage;
+using Microsoft.EntityFrameworkCore.Storage.Internal;
 using System;
 
 namespace CardKing.Migrations
 {
     [DbContext(typeof(CardContext))]
-    [Migration("20180128001421_InitialCreate")]
+    [Migration("20180219004722_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.0.1-rtm-125");
+                .HasAnnotation("ProductVersion", "2.0.1-rtm-125")
+                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("CardKing.Models.Card", b =>
                 {
@@ -25,6 +27,8 @@ namespace CardKing.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Content");
+
+                    b.Property<DateTime>("Date");
 
                     b.Property<string>("FileName");
 

@@ -28,6 +28,7 @@
     <Compile Remove="Controllers\HomeController.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Migrations\" />
     <Folder Include="wwwroot\images\" />
     <Folder Include="Views\Card\" />
   </ItemGroup>

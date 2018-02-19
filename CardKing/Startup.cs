@@ -12,6 +12,7 @@ namespace CardKing
 {
     public class Startup
     {
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -23,7 +24,17 @@ namespace CardKing
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddDbContext<CardContext>(options => options.UseMySQL("Server=localhost;Database=ck;Uid=ck;Pwd=jingshun"));
+            string provider = Configuration["Connection:Provider"];
+            string connectionString = Configuration["Connection:ConnectionString"];
+            if (provider == "MSSqlServer")
+            {
+                services.AddDbContext<CardContext>(options => options.UseSqlServer(connectionString));
+            }
+            else if (provider == "MySql")
+            {
+                services.AddDbContext<CardContext>(options => options.UseMySQL(connectionString));
+
+            }
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
